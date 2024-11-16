@@ -3,5 +3,6 @@ import 'package:flutter_api_task_clean_architecture/core/coreblocs/baseBloc/bloc
 
 abstract class StartupInitializerRepository with WidgetsBindingObserver {
   Future<void> initialize(BaseBloc ref);
+  Future<void> initializeFirebase();
   Future<void> updateConnectionStatus(BaseBloc ref);
 }

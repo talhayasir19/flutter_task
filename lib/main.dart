@@ -9,7 +9,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'layers/data/datasource/network/export.dart';
 import 'layers/data/repository/ApiRepository/export.dart';
-import 'layers/presentation/views/homepage/export.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "88675559540",
-    "project_id": "flutterapitask",
-    "storage_bucket": "flutterapitask.appspot.com"
+    "project_number": "836976921245",
+    "project_id": "flutterapitask-ed2b1",
+    "storage_bucket": "flutterapitask-ed2b1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:88675559540:android:59253f0ebcd5629e0bc921",
+        "mobilesdk_app_id": "1:836976921245:android:6efbf696a8ce2bca75a274",
         "android_client_info": {
           "package_name": "com.example.flutter_api_task_clean_architecture"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBKUoILmdaLUFyb2ICmewMIxfhBizAxTHg"
+          "current_key": "AIzaSyC107xzSlZYDm6otsCT_zFTmN-7nuoMoKU"
         }
       ],
       "services": {

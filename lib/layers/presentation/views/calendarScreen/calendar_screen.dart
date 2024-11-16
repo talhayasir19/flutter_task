@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:get_it/get_it.dart';
 
 import '../../../../core/coreblocs/baseBloc/bloc/base_bloc_bloc.dart';
 import '../../../../core/coreblocs/baseBloc/bloc/base_bloc_event.dart';
+import '../../../../core/utils/export.dart';
 import '../../../data/datasource/local/export.dart';
 import '../../../data/models/export.dart';
 import 'bloc/calendar_screen_bloc.dart';
@@ -84,21 +86,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          final cacheData = await GetIt.I<HiveStorageImpl>()
-              .getObject<CalendarDataModel>(
-                  cast: CalendarDataModel.fromJson,
-                  objectType: ObjectType.calendarData);
-
-          log("Cached Data");
-          if (cacheData != null) {
-            final lastCachedTime =
-                await GetIt.I<HiveStorageImpl>().getObject<String>(
-                    cast: (object) {
-                      final lastCahedTime = object['lastCached'] as String;
-                      return lastCahedTime;
-                    },
-                    objectType: ObjectType.lastCacheData);
-          }
+          await PushNotificationUtil.sendNotification(
+              deviceToken:
+                  'fH2BjAvlRduj74BMNRvdQ3:APA91bFgW1IJ1FC0DHbXkumC5OudzirTvkVIP6EZOpR11fzZ58qywR96isoah7QiXvaJVU33veZjlKLxLzJFHZwqE0F2RZo6oawd4vDq2FfnFuJWqz3keI_sN17IWl69ffRsXAG2VH_7',
+              message: "Testing");
         },
       ),
     );
